@@ -12,3 +12,15 @@
  *    return "something";
  * };
  */
+
+function add (a, b) {
+    return a + b
+}
+
+export {add}        // Tambien puedo exportar como en el ejempplo
+
+/*
+export function add (a, b) {
+    return a + b
+}
+*/

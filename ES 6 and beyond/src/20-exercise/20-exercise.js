@@ -25,7 +25,17 @@
  */
 
 // Create the Person class
-class Person {}
+class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName
+        this.lastName = lastName
+    }
+
+    sayName() {
+        return (firstName + ' ' + lastName)
+    }
+
+}
 
 // Create a new instance of the class with the arguments:
 //

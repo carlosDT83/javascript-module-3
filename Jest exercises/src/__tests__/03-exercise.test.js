@@ -8,8 +8,11 @@ describe("03-exercises", () => {
     const numbers = [1, 2, 3, 4, 5];
     const expected = [2, 4, 6, 8, 10];
 
-    expect.assertions(1);
+    let result = multiplyNums(numbers)
 
+    expect(result).toEqual(expected)    //.toStrictEqual()
+
+    expect.assertions(1);    
     /**
      * Make an assertion that the result of executing the multiplyNums function
      * with the `numbers` array as an argument, is equal to the `expected` array
@@ -22,6 +25,10 @@ describe("03-exercises", () => {
     const numbers = [1, 2, 3, 4, 5];
 
     expect.assertions(1);
+
+    const result = multiplyNums(numbers)
+    
+    expect(result).not.toBe(numbers)
 
     /**
      * Write an assertion that the array returned by the multiplyNums function
@@ -48,6 +55,10 @@ describe("03-exercises", () => {
     };
 
     expect.assertions(1);
+
+    const result = sanitizeUserData(userWithSensitiveInformation)
+
+    expect(result).toEqual(safeUserData)
 
     /**
      * Finish the test so that it checks if the result of calling
