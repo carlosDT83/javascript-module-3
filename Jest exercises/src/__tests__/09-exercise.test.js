@@ -18,7 +18,7 @@ describe("09-exercises", () => {
   });
 
   // 3. Restore the initial implementation of the addSpy using .mockRestore()
-  addSpy.mockRestore()
+  afterAll(() => addSpy.mockRestore())
   test("increment returns 10 for 7 + 3", () => {
     let result = null;
 
@@ -36,7 +36,7 @@ describe("09-exercises", () => {
     expect(addSpy).toHaveBeenCalledTimes(1)
     // 7. Make an assertion that the addSpy has been called with the
     //    numbers 7 and 3
-    expect(result).toHaveBeenCalledWith(7, 3)
+    expect(addSpy).toHaveBeenCalledWith(7, 3)
   });
 
   test("increment returns 15 for 10 + 5", () => {

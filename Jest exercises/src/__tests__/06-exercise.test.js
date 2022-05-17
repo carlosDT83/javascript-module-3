@@ -48,7 +48,7 @@ describe("06-exercises", () => {
 
     expect.assertions(1);
 
-    const result = await fetchUserFail(userID)
+    const result = await fetchUserOK(userID)
 
     expect(result).toEqual(expectedUser)
 

@@ -32,7 +32,7 @@ class Person {
     }
 
     sayName() {
-        return (firstName + ' ' + lastName)
+        return (this.firstName + ' ' + this.lastName)
     }
 
 }
@@ -43,7 +43,7 @@ class Person {
 // lastName: "Spark"
 //
 // Store the new instance in the `ana` variable
-let ana = "";
+let ana = new Person("Ana", "Spark");
 
 // Don’t change the code bellow this line
 export { Person, ana };

@@ -16,10 +16,7 @@ describe("05-exercises", () => {
     const prevList = [1, 2, 3, 4];
     const newItem = 5;
 
-    const result = addItemToList(prevList, newItem)
-
-    expect(result).toEqual(expected)
-
+    
     /**
      * Test that the addItemToList function adds the `newItem` variable to the
      * `prevList` array and returns an array that contains the previous elements
@@ -27,8 +24,11 @@ describe("05-exercises", () => {
      *
      * The function receives as arguments the previous array and the new item
      */
-
+    
     // Write the assertion
+    const result = addItemToList(prevList, newItem)
+  
+    expect(result).toContain(newItem)
   });
 
   test("addUser adds a new user to the list of users", () => {

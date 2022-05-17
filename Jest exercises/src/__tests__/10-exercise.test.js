@@ -7,8 +7,9 @@ describe("10-exercises", () => {
   beforeAll(() => {
     // 1. set the default inner html of the document body
     //    to have a div with a class of .wrapper
-    document.querySelector('body')
-    body.innerHTML = 'div = ".wrapper"'
+    
+    document.body.innerHTML = '<div class="wrapper"></div>'
+    
   });
 
   test("adds a button to the dom", () => {
@@ -23,12 +24,12 @@ describe("10-exercises", () => {
     // 3. use document.querySelector to get the new button
     //    the `addButton` creates a button with a class of .btn
     //    that you can use in document.querySelector
-    document.querySelector('.btn')
+    const button = document.querySelector('.btn')
 
     // 4. make an assertion that the buttons textContent is
     //    the same as the `btnText` variable
-    let result = textContent
+    //let result = textContent
 
-    expect(result).toBe(btnText)
+    expect(button.textContent).toBe(btnText)
   });
 });
